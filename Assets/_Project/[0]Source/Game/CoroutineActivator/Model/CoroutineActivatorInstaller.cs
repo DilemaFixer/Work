@@ -1,14 +1,18 @@
-﻿using UnityEngine;
+﻿using System.Collections;
 using Zenject;
 
 namespace Code.CoroutineActivator
 {
-    public class CoroutineActivatorInstaller : MonoInstaller
+    public class CoroutineActivatorInstaller : MonoInstaller , ICoroutineActivator
     {
-        [SerializeField] private CoroutineActivator _coroutineActivator;
         public override void InstallBindings()
         {
-            Container.Bind<ICoroutineActivator>().To<CoroutineActivator>().FromInstance(_coroutineActivator).AsSingle();
+            Container.Bind<ICoroutineActivator>().To<CoroutineActivatorInstaller>().FromInstance(this).AsSingle();
+        }
+
+        public void ActiveitCoroutine(IEnumerator coroutine)
+        {
+            StartCoroutine(coroutine);
         }
     }
 }

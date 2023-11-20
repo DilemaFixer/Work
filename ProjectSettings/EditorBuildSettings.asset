@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/[1]Resources/Scenes/Game.unity
     guid: cbb7a37d9c72ebb4086f7993f2d358d6
+  - enabled: 1
+    path: Assets/_Project/[1]Resources/Scenes/UpgradeHub.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}

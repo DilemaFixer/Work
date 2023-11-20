@@ -5,6 +5,6 @@ namespace Code.CoroutineActivator
 {
     public interface ICoroutineActivator
     {
-        public Coroutine StartCoroutine(IEnumerator coroutine);
+        public void ActiveitCoroutine(IEnumerator coroutine);
     }
 }

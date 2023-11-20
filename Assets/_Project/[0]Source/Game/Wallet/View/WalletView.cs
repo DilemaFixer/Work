@@ -1,24 +1,32 @@
 ﻿using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Zenject;
 
 namespace Code.Wallet
 {
     public class WalletView : MonoBehaviour
     {
-        [SerializeField] private TextMeshProUGUI _text;
+        [SerializeField] private TextMeshProUGUI _goldText;
+        [SerializeField] private TextMeshProUGUI _diamondText;
         private IWallet _wallet;
         
         [Inject]
         public void Constract(IWallet wallet)
         {
             _wallet = wallet;
-            _wallet.IsManyChange += SetTextVelue;
+            _wallet.IsGoldChange += SetGoldVelue;
+            _wallet.IsDiamondsChanges += SetDiamondVelue;
         }
         
-        public void SetTextVelue(int amount)
+        private void SetGoldVelue(int amount)
         {
-            _text.text = amount.ToString();
+            _goldText.text = amount.ToString();
+        }
+
+        private void SetDiamondVelue(int amount)
+        {
+            _diamondText.text = amount.ToString();
         }
     }
 }

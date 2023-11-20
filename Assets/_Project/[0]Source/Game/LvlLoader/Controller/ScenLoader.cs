@@ -10,6 +10,7 @@ namespace Code.ScenLoader
     public class ScenLoader
     {
         private ICoroutineActivator _coroutineActivator;
+        private int _indexOfCurrentScen;
         public float ProgresAsyncLoadingScen { get; private set; }
 
         [Inject]
@@ -18,28 +19,50 @@ namespace Code.ScenLoader
             _coroutineActivator = coroutineActivator;
         }
 
-        public void LoadScenAsync(int index)
+        public void LoadScen(int scenIndex, ScenLoadingType loadingType)
         {
-            _coroutineActivator.StartCoroutine(LoadScenAsyncCorutine(index));
+            if(scenIndex == _indexOfCurrentScen)
+                return;
+            
+            if (scenIndex < 0 && scenIndex > SceneManager.sceneCount)
+            {
+                throw new IndexOutOfRangeException("Scene does not exist at index: " + scenIndex);
+            }
+            
+            switch (loadingType)
+            {
+                case ScenLoadingType.Single:
+                    LoadScenSingle(scenIndex);
+                    break;
+                case ScenLoadingType.Additive:
+                    LoadScenAdditive(scenIndex);
+                    break;
+                case ScenLoadingType.Async:
+                    LoadScenAsync(scenIndex);
+                    break;
+                default:
+                    _indexOfCurrentScen = scenIndex;
+                    break;
+            }
         }
 
-        public void LoadScenAdditive(int index)
+        private void LoadScenSingle(int index)
         {
-            if (index < 0 && index > SceneManager.sceneCount)
-            {
-                throw new IndexOutOfRangeException("Scene does not exist at index: " + index);
-            }
+            SceneManager.LoadScene(index, LoadSceneMode.Single);
+        }
+        
+        private void LoadScenAsync(int index)
+        {
+            _coroutineActivator.ActiveitCoroutine(LoadScenAsyncCorutine(index));
+        }
 
+        private void LoadScenAdditive(int index)
+        {
             SceneManager.LoadScene(index, LoadSceneMode.Additive);
         }
 
         private IEnumerator LoadScenAsyncCorutine(int index)
         {
-            if (index < 0 && index > SceneManager.sceneCount)
-            {
-                throw new IndexOutOfRangeException("Scene does not exist at index: " + index);
-            }
-
             SceneManager.LoadScene(index, LoadSceneMode.Additive);
             AsyncOperation asyncScenOperation = SceneManager.LoadSceneAsync(index);
 
