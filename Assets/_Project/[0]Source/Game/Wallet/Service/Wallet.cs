@@ -1,10 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using Code.SaveServise;
 using Zenject;
 
 namespace Code.Wallet
 {
-    public class Wallet : IWallet
+    // I realize that the interface is useless in this case because most of the time it cannot be changed.
+    // But I'm just too lazy to rewrite it =) 
+    public class Wallet : IWallet 
+    
     {
         public event Action<int> IsGoldChange;
         public event Action<int> IsDiamondsChanges;
@@ -13,8 +17,13 @@ namespace Code.Wallet
         private ISaveServise _saveServise;
 
         [Inject]
-        public void Constructor(ISaveServise saveServise) => _saveServise = saveServise;
-        
+        private void Constructor(ISaveServise saveServise)
+        {
+            _saveServise = saveServise;
+
+            GetValuesFromeSave();
+        }
+
         public void WithdrawGold(int amount)
         {
             ChekAmountOnBelowZero(amount);
@@ -63,6 +72,37 @@ namespace Code.Wallet
             ChangeHandling(amount , ChangeWalletValueType.Diamond);
         }
 
+        public bool HasGold(int amount)
+        {
+            if (CompareNumbers(amount, _gold)) return false;
+
+            return true;
+        }
+
+        public bool HasDiamonds(int amount)
+        {
+            if (CompareNumbers(amount, _diamonds)) return false;
+
+            return true;
+        }
+
+        private bool CompareNumbers(int num1, int num2)
+        {
+            return Comparer<int>.Default.Compare(num1, num2) > 0;
+        }
+        
+        private void GetValuesFromeSave()
+        {
+            int goldSaveAmount = _saveServise.GetInt(WalletConstants.GoldSaveKey);
+            int diamondsSaveAmount = _saveServise.GetInt(WalletConstants.DiamondSaveKey);
+
+            if (goldSaveAmount > 0)
+                RefillGold(goldSaveAmount);
+
+            if (diamondsSaveAmount > 0)
+                RefillDiamonds(diamondsSaveAmount);
+        }
+
         private static void ChekAmountOnBelowZero(int amount)
         {
             if (amount <= 0)
@@ -71,11 +111,16 @@ namespace Code.Wallet
 
         private void ChangeHandling(int amount , ChangeWalletValueType handlingType)
         {
-            IsGoldChange?.Invoke(_gold);
-            if(handlingType == ChangeWalletValueType.Gold)
-                _saveServise.SaveInt("maney", amount);
+            if (handlingType == ChangeWalletValueType.Gold)
+            {
+                _saveServise.SaveInt(WalletConstants.GoldSaveKey, amount);
+                IsGoldChange?.Invoke(_gold);
+            }
             else
-                _saveServise.SaveInt("diamond", amount);
+            {
+                _saveServise.SaveInt(WalletConstants.DiamondSaveKey, amount);
+                IsDiamondsChanges?.Invoke(_diamonds);
+            }
         }
     }
 }

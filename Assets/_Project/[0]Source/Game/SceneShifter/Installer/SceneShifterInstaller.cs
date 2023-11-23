@@ -9,8 +9,8 @@ namespace Code.ScenLoader
 
         public override void InstallBindings()
         {
-            Container.Bind<SceneShifterButtons>().FromInstance(_buttons).AsSingle();
             Container.Bind<SceneShifter>().AsSingle().NonLazy();
+            Container.Resolve<SceneShifter>().SetSceneShifterButtons(_buttons);
         }
     }
 }

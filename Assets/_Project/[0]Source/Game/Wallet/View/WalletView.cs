@@ -1,6 +1,5 @@
 ﻿using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Zenject;
 
 namespace Code.Wallet
@@ -12,7 +11,7 @@ namespace Code.Wallet
         private IWallet _wallet;
         
         [Inject]
-        public void Constract(IWallet wallet)
+        private void Constract(IWallet wallet)
         {
             _wallet = wallet;
             _wallet.IsGoldChange += SetGoldVelue;

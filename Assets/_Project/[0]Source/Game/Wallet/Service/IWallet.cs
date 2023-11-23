@@ -10,5 +10,7 @@ namespace Code.Wallet
         void RefillGold(int amount);
         void WithdrawDiamonds(int amount);
         void RefillDiamonds(int amount);
+        bool HasGold(int amount);
+        bool HasDiamonds(int amount);
     }
 }

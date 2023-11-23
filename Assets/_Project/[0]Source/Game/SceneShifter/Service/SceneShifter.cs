@@ -7,20 +7,28 @@ namespace Code.ScenLoader
     {
         private ScenLoader _scenLoader;
         private SceneShifterButtons _sceneShifterButtons;
-        private int _countOfButtons;
+        private int _countsOfButtons;
         
         [Inject]
-        public void Constructor(ScenLoader scenLoader , SceneShifterButtons sceneShifterButtons)
+        private void Constructor(ScenLoader scenLoader )
         {
             _scenLoader = scenLoader;
+        }
+
+        public void SetSceneShifterButtons(SceneShifterButtons sceneShifterButtons)
+        {
             _sceneShifterButtons = sceneShifterButtons;
-            _countOfButtons = sceneShifterButtons._SceneShifterButton.Length;
-            
-            for (int i = 0; i < _countOfButtons; i++)
+            _countsOfButtons = _sceneShifterButtons._SceneShifterButton.Length;
+            InitSceneShifterButtonsSubscribes();
+        }
+
+        private void InitSceneShifterButtonsSubscribes()
+        {
+            for (int i = 0; i < _countsOfButtons; i++)
             {
-                sceneShifterButtons._SceneShifterButton[i].Button.onClick.AddListener(() =>
+                _sceneShifterButtons._SceneShifterButton[i].Button.onClick.AddListener(() =>
                 {
-                    LoadScen(scenLoader, sceneShifterButtons, i-1);
+                    LoadScen(_scenLoader, _sceneShifterButtons, i - 1);
                 });
             }
         }
@@ -33,7 +41,7 @@ namespace Code.ScenLoader
 
         public void Dispose()
         {
-            for (int i = 0; i < _countOfButtons; i++)
+            for (int i = 0; i < _countsOfButtons; i++)
             {
                 _sceneShifterButtons._SceneShifterButton[i].Button.onClick.RemoveAllListeners();
             }

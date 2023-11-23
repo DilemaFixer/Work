@@ -7,6 +7,5 @@ namespace Code.ScenLoader
     public class SceneShifterButtons
     {
         public SceneShifterButton[] _SceneShifterButton;
-        
     }
 }

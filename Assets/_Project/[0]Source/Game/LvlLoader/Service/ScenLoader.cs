@@ -14,21 +14,15 @@ namespace Code.ScenLoader
         public float ProgresAsyncLoadingScen { get; private set; }
 
         [Inject]
-        public void Constructor(ICoroutineActivator coroutineActivator)
+        private void Constructor(ICoroutineActivator coroutineActivator)
         {
             _coroutineActivator = coroutineActivator;
         }
 
         public void LoadScen(int scenIndex, ScenLoadingType loadingType)
         {
-            if(scenIndex == _indexOfCurrentScen)
-                return;
-            
-            if (scenIndex < 0 && scenIndex > SceneManager.sceneCount)
-            {
-                throw new IndexOutOfRangeException("Scene does not exist at index: " + scenIndex);
-            }
-            
+            if (IsCorrectnessScenIndex(scenIndex)) return;
+
             switch (loadingType)
             {
                 case ScenLoadingType.Single:
@@ -40,10 +34,21 @@ namespace Code.ScenLoader
                 case ScenLoadingType.Async:
                     LoadScenAsync(scenIndex);
                     break;
-                default:
-                    _indexOfCurrentScen = scenIndex;
-                    break;
             }
+        }
+
+        private bool IsCorrectnessScenIndex(int scenIndex)
+        {
+            if (scenIndex == _indexOfCurrentScen)
+                return true;
+
+            if (scenIndex < 0 && scenIndex > SceneManager.sceneCount)
+            {
+                throw new IndexOutOfRangeException("Scene does not exist at index: " + scenIndex);
+            }
+
+            _indexOfCurrentScen = scenIndex;
+            return false;
         }
 
         private void LoadScenSingle(int index)
