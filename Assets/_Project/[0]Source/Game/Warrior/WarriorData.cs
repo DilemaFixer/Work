@@ -9,14 +9,22 @@ namespace Code.Warrior
     public class WarriorData : MonoBehaviour
     {
         [SerializeField] private WarriorUpgradeData _upgradeData;
+        [SerializeField] private int _lvl;
         
         private int _damage;
         private int _reloadSpeed;
         private int _cashMultiplier;
-        
+
+        public event Action IsMaxUpgrade;
+
         public int Damage { get; private set; }
         public int ReloadSpeed { get; private set; }
-        public int CashMultiplier { get; private set; }
+        public int MoneyDrop { get; private set; }
+
+        public int Lvl
+        {
+            get { return _lvl; }
+        }
 
         public void UpgradeDamage(int amount)
         {
@@ -40,12 +48,12 @@ namespace Code.Warrior
 
         public void UpgradeMoneyDrop(int amount)
         {
-            if (!IsImproves(SkillsType.CashMultiplier , CashMultiplier))
+            if (!IsImproves(SkillsType.CashMultiplier , MoneyDrop))
             {
                 return;
             }
             
-            CashMultiplier += amount;
+            MoneyDrop += amount;
         }
 
 
@@ -59,6 +67,14 @@ namespace Code.Warrior
 
             return true;
         }
-        
+
+        public void ChekIsAllImproves()
+        {
+            if (IsImproves(SkillsType.CashMultiplier, MoneyDrop) &&
+                IsImproves(SkillsType.ReloadSpeed, ReloadSpeed) && IsImproves(SkillsType.Damag, Damage))
+            {
+                IsMaxUpgrade?.Invoke();
+            }
+        }
     }
 }

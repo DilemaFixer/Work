@@ -2,7 +2,7 @@
 
 namespace Code.SaveServise
 {
-    public class PlayerPrefsServise : ISaveServise
+    public class PlayerPrefsParametersSaveServise : IParametersSaveServise
     {
         public void SaveInt(string key, int value)
         {

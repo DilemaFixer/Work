@@ -5,78 +5,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="659ea92f-eef9-4f64-bb61-3db12fdb7ac6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Wallet/Constants.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Wallet/Constants/WalletConstants.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Wallet/Constants/WalletConstants.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Warrior.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Warrior/SkillsType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Warrior/SkillsType.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Warrior/Warrior.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Warrior/Warrior.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Warrior/WarriorData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Warrior/WarriorData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Warrior/WarriorData/WarriorUpgradeData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Warrior/WarriorData/WarriorUpgradeData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorUpgrader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorUpgrader/PlayerWarrior.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorUpgrader/PlayerWarrior.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorUpgrader/WarriorCollection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorUpgrader/WarriorCollection.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorUpgrader/WarriorUpgrader.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorUpgrader/WarriorUpgrader.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/CustomExceptions.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/CustomExceptions/ValueRepeatsException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/CustomExceptions/ValueRepeatsException.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SaveServise/Service/IObjectSaveService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SaveServise/Service/IObjectSaveService.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SaveServise/Service/JsonSavingSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorFactory.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorFactory/Installer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorFactory/Installer/WarriorFactoryInstaller.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorFactory/Installer/WarriorFactoryInstaller.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorFactory/Service.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorFactory/Service/WarriorFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorFactory/Service/WarriorFactory.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorUpgrader/Constants.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorUpgrader/Constants/PlayerWarriorConstants.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorUpgrader/Constants/PlayerWarriorConstants.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorUpgrader/Installer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorUpgrader/Installer/WarriorUpgraderInstaller.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorUpgrader/Installer/WarriorUpgraderInstaller.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorUpgrader/Service.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorUpgrader/Service/PlayerWarrior.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorUpgrader/Service/PlayerWarriorUpgrader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorUpgrader/Service/WarriorCollection.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorUpgrader/View.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorUpgrader/View/PlayerWarriorUpgraderView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorUpgrader/View/PlayerWarriorUpgraderView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Project/[1]Resources/Json.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Work/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Work/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/CoroutineActivator/Controller.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/CoroutineActivator/Service.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/CoroutineActivator/Controller/ICoroutineActivator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/CoroutineActivator/Service/ICoroutineActivator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/CoroutineActivator/Controller/ICoroutineActivator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/CoroutineActivator/Service/ICoroutineActivator.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/CoroutineActivator/Model.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/CoroutineActivator/Installer.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/CoroutineActivator/Model/CoroutineActivatorInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/CoroutineActivator/Installer/CoroutineActivatorInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/CoroutineActivator/Model/CoroutineActivatorInstaller.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/CoroutineActivator/Installer/CoroutineActivatorInstaller.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/LvlLoader/Controller.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/LvlLoader/Service.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/LvlLoader/Controller/ScenLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/LvlLoader/Service/ScenLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/LvlLoader/Controller/ScenLoader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/LvlLoader/Service/ScenLoader.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/LvlLoader/Controller/ScenLoadingType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/LvlLoader/Service/ScenLoadingType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/LvlLoader/Controller/ScenLoadingType.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/LvlLoader/Service/ScenLoadingType.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/LvlLoader/Model.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/LvlLoader/Installer.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/LvlLoader/Model/SnecLoaderInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/LvlLoader/Installer/SnecLoaderInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/LvlLoader/Model/SnecLoaderInstaller.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/LvlLoader/Installer/SnecLoaderInstaller.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SaveServise/Controller.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SaveServise/Service.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SaveServise/Controller/ISaveServise.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SaveServise/Service/ISaveServise.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SaveServise/Controller/ISaveServise.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SaveServise/Service/ISaveServise.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SaveServise/Controller/PlayerPrefsServise.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SaveServise/Service/PlayerPrefsServise.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SaveServise/Controller/PlayerPrefsServise.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SaveServise/Service/PlayerPrefsServise.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SaveServise/Model.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SaveServise/Installer.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SaveServise/Model/SaveInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SaveServise/Installer/SaveInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SaveServise/Model/SaveInstaller.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SaveServise/Installer/SaveInstaller.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SceneShifter/Controller.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SceneShifter/Service.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SceneShifter/Controller/SceneShifter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SceneShifter/Service/SceneShifter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SceneShifter/Controller/SceneShifter.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SceneShifter/Service/SceneShifter.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SceneShifter/Controller/SceneShifterButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SceneShifter/Service/SceneShifterButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SceneShifter/Controller/SceneShifterButton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SceneShifter/Service/SceneShifterButton.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SceneShifter/Controller/SceneShifterButtons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SceneShifter/Service/SceneShifterButtons.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SceneShifter/Controller/SceneShifterButtons.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SceneShifter/Service/SceneShifterButtons.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SceneShifter/Model.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SceneShifter/Installer.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SceneShifter/Model/SceneShifterInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SceneShifter/Installer/SceneShifterInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SceneShifter/Model/SceneShifterInstaller.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SceneShifter/Installer/SceneShifterInstaller.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Wallet/Controller.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Wallet/Service.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Wallet/Controller/ChangeWalletValueType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Wallet/Service/ChangeWalletValueType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Wallet/Controller/ChangeWalletValueType.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Wallet/Service/ChangeWalletValueType.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Wallet/Controller/IWallet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Wallet/Service/IWallet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Wallet/Controller/IWallet.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Wallet/Service/IWallet.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Wallet/Controller/Wallet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Wallet/Service/Wallet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Wallet/Controller/Wallet.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Wallet/Service/Wallet.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Wallet/Model.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Wallet/Installer.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Wallet/Model/WalletInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Wallet/Installer/WalletInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Wallet/Model/WalletInstaller.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Wallet/Installer/WalletInstaller.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Wallet/View/WalletView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Wallet/View/WalletView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorDataServise.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Warrior/WarriorData.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorDataServise/Controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorDataServise/Controller/WarriorData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorDataServise/Controller/WarriorData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorDataServise/Controller/WarriorDataServise.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorDataServise/Controller/WarriorDataServise.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorDataServise/Model.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorDataServise/Model/WarriorDataInstaller.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorDataServise/Model/WarriorDataInstaller.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SaveServise/Installer/SaveInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SaveServise/Installer/SaveInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SaveServise/Service/ISaveServise.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SaveServise/Service/IParametersSaveServise.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SaveServise/Service/ISaveServise.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SaveServise/Service/IParametersSaveServise.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SaveServise/Service/PlayerPrefsServise.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SaveServise/Service/PlayerPrefsParametersSaveServise.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SaveServise/Service/PlayerPrefsServise.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/SaveServise/Service/PlayerPrefsParametersSaveServise.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Wallet/Constants/WalletConstants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Wallet/Constants/WalletConstants.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Wallet/Service/Wallet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Wallet/Service/Wallet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Warrior/WarriorData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/Warrior/WarriorData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorUpgrader/PlayerWarrior.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorUpgrader/PlayerWarrior.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorUpgrader/Service/PlayerWarrior.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorUpgrader/WarriorCollection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorUpgrader/WarriorCollection.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorUpgrader/Service/WarriorCollection.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorUpgrader/WarriorUpgrader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorUpgrader/WarriorUpgrader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/[0]Source/Game/WarriorUpgrader/Service/PlayerWarriorUpgrader.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +61,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b1fe495152fd4f0180f79e56e3bccacc173e00/fe/dd2c88e1/LoadSceneMode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f5b293c74049457cabc28437c5a763925a00/a8/e8cb0e8a/InjectTypeInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2YBHqovOyFv0Qn9bBpTH2aLb9Dm" />
@@ -172,6 +145,7 @@
       <workItem from="1700062989509" duration="9665000" />
       <workItem from="1700306091024" duration="14446000" />
       <workItem from="1700678960745" duration="13727000" />
+      <workItem from="1700728611486" duration="9575000" />
     </task>
     <servers />
   </component>

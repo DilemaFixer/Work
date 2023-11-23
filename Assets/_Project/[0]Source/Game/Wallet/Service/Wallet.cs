@@ -7,19 +7,18 @@ namespace Code.Wallet
 {
     // I realize that the interface is useless in this case because most of the time it cannot be changed.
     // But I'm just too lazy to rewrite it =) 
-    public class Wallet : IWallet 
-    
+    public class Wallet : IWallet
     {
         public event Action<int> IsGoldChange;
         public event Action<int> IsDiamondsChanges;
         private int _gold;
         private int _diamonds;
-        private ISaveServise _saveServise;
+        private IParametersSaveServise parametersSaveServise;
 
         [Inject]
-        private void Constructor(ISaveServise saveServise)
+        private void Constructor(IParametersSaveServise parametersSaveServise)
         {
-            _saveServise = saveServise;
+            this.parametersSaveServise = parametersSaveServise;
 
             GetValuesFromeSave();
         }
@@ -93,8 +92,8 @@ namespace Code.Wallet
         
         private void GetValuesFromeSave()
         {
-            int goldSaveAmount = _saveServise.GetInt(WalletConstants.GoldSaveKey);
-            int diamondsSaveAmount = _saveServise.GetInt(WalletConstants.DiamondSaveKey);
+            int goldSaveAmount = parametersSaveServise.GetInt(WalletConstants.GOLD_SAVE_KEY);
+            int diamondsSaveAmount = parametersSaveServise.GetInt(WalletConstants.DIAMOND_SAVE_KEY);
 
             if (goldSaveAmount > 0)
                 RefillGold(goldSaveAmount);
@@ -113,12 +112,12 @@ namespace Code.Wallet
         {
             if (handlingType == ChangeWalletValueType.Gold)
             {
-                _saveServise.SaveInt(WalletConstants.GoldSaveKey, amount);
+                parametersSaveServise.SaveInt(WalletConstants.GOLD_SAVE_KEY, amount);
                 IsGoldChange?.Invoke(_gold);
             }
             else
             {
-                _saveServise.SaveInt(WalletConstants.DiamondSaveKey, amount);
+                parametersSaveServise.SaveInt(WalletConstants.DIAMOND_SAVE_KEY, amount);
                 IsDiamondsChanges?.Invoke(_diamonds);
             }
         }

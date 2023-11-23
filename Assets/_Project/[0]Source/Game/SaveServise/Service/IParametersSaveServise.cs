@@ -1,6 +1,6 @@
 ﻿namespace Code.SaveServise
 {
-    public interface ISaveServise
+    public interface IParametersSaveServise
     {
         void SaveInt(string key, int value);
         int GetInt(string key);

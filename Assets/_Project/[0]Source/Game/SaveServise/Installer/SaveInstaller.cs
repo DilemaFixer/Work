@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.ComponentModel;
+using Code.Warrior;
 using Zenject;
 
 namespace Code.SaveServise
@@ -7,7 +8,8 @@ namespace Code.SaveServise
     {
         public override void InstallBindings()
         {
-            Container.Bind<ISaveServise>().To<PlayerPrefsServise>().AsSingle();
+            Container.Bind<IParametersSaveServise>().To<PlayerPrefsParametersSaveServise>().AsSingle();
+            Container.Bind<IObjectSaveService<WarriorData>>().To<JsonSavingSystem<WarriorData>>().AsSingle();
         }
     }
 }
