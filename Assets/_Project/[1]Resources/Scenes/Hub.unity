@@ -546,7 +546,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 974fa1b1e4fa4592bad48eefc8371ea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _walletView: {fileID: 2138820499}
 --- !u!114 &316263604
 MonoBehaviour:
   m_ObjectHideFlags: 0
